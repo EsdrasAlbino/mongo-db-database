@@ -1,5 +1,5 @@
 import insercao from "./InsercaoTotal.js";
-import checkListProject from "./ChecklistProjeto.js";
+import checkListProject from "./Consultas.js";
 
 const executarConsultas = async () => {
   try {

@@ -14,10 +14,10 @@ Este projeto implementa um sistema de gerenciamento de consultorias financeiras 
 ```
 mongo-db/
 ├── index.js              # Arquivo principal - orquestra a execução
-├── InsercaoTotal.js       # Script de inserção de dados no banco
-├── ChecklistProjeto.js    # Script de consultas e operações MongoDB
-├── package.json           # Dependências e configurações do projeto
-├── tsconfig.json          # Configurações TypeScript
+├── InsercaoTotal.js      # Script de inserção de dados no banco
+├── Consultas.js          # Script de consultas e operações MongoDB
+├── package.json          # Dependências e configurações do projeto
+├── tsconfig.json         # Configurações TypeScript
 └── README.md             # Documentação do projeto
 ```
 
@@ -100,7 +100,7 @@ node -e "import('./InsercaoTotal.js').then(m => m.default())"
 
 Para executar apenas as consultas:
 ```bash
-node -e "import('./ChecklistProjeto.js').then(m => m.default())"
+node -e "import('./Consultas.js').then(m => m.default())"
 ```
 
 ## 🔍 Consultas Implementadas
