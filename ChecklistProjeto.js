@@ -18,9 +18,9 @@ const checkListProject = async () => {
     console.log("--- 1. USE: Conectado ao banco de dados 'projeto_financeiro' ---");
 
     // --- 2. FIND ---
-    console.log("\n--- 2. FIND: Encontrando todos os clientes com perfil 'Arrojado' ---");
-    const clientesArrojados = await db.collection('clientes').find({ perfil_investidor: "Arrojado" }).toArray();
-    console.log(JSON.stringify(clientesArrojados, null, 2));
+    console.log("\n--- 2. FIND: Encontrando todos os clientes com perfil 'Agressivo' ---");
+    const clientesAgressivos = await db.collection('clientes').find({ perfil_investidor: "Agressivo" }).toArray();
+    console.log(JSON.stringify(clientesAgressivos, null, 2));
 
     // --- 3. SIZE ---
     console.log("\n--- 3. SIZE: Encontrando clientes que possuem exatamente 3 investimentos ---");
@@ -35,7 +35,7 @@ const checkListProject = async () => {
       {
         $match: {
           data_adesao: { $gte: new Date("2022-01-01T00:00:00Z") },
-          perfil_investidor: { $in: ["Moderado", "Arrojado"] },
+          perfil_investidor: { $in: ["Moderado", "Conservador"] },
         },
       },
       { $unwind: "$investimentos" },
